@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.example.cadastro_de_bugs.SampleController">
+    <top>
+        <Label text="Cadastro de Bugs" BorderPane.alignment="CENTER">
+            <font>
+                <Font name="Arial Bold" size="23.0" />
+            </font>
+            <BorderPane.margin>
+                <Insets top="10.0" />
+            </BorderPane.margin>
+        </Label>
+    </top>
+    <center>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="43.0" prefWidth="600.0">
+                    <children>
+                        <Label text="Nome">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="70.0" top="17.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="nameText" onAction="#enterName">
+                            <HBox.margin>
+                                <Insets left="50.0" top="15.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets bottom="7.0" right="280.0" />
+                            </padding>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="33.0" prefWidth="600.0">
+                    <children>
+                        <Label text="Email">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="70.0" top="7.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="nameEmail" onAction="#enterEmail">
+                            <padding>
+                                <Insets bottom="7.0" right="280.0" />
+                            </padding>
+                            <HBox.margin>
+                                <Insets left="55.0" top="4.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="600.0">
+                    <children>
+                        <Label text="Sistema">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="70.0" top="7.0" />
+                            </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="btnSystem" onAction="#selectSystem" prefWidth="150.0">
+                            <HBox.margin>
+                                <Insets left="40.0" top="4.0" />
+                            </HBox.margin>
+                        </ComboBox>
+                        <Label text="Prioridade">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="168.0" top="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox prefHeight="36.0" prefWidth="600.0">
+                    <children>
+                        <Label text="Título">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="70.0" top="7.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="nameTitle" onAction="#enterTitle">
+                            <HBox.margin>
+                                <Insets left="53.0" top="5.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets bottom="7.0" right="135.0" />
+                            </padding>
+                        </TextField>
+                        <ComboBox fx:id="btnPriority" onAction="#selectPriority" prefHeight="25.0" prefWidth="136.0">
+                            <HBox.margin>
+                                <Insets left="10.0" top="4.0" />
+                            </HBox.margin>
+                        </ComboBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="134.0" prefWidth="600.0">
+                    <children>
+                        <Label text="Descrição">
+                            <HBox.margin>
+                                <Insets left="70.0" top="10.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                        <TextArea fx:id="descriptionText" onDragDetected="#enterDescription" prefHeight="99.0" prefWidth="414.0">
+                            <HBox.margin>
+                                <Insets left="30.0" top="35.0" />
+                            </HBox.margin>
+                        </TextArea>
+                    </children>
+                </HBox>
+                <HBox prefHeight="33.0" prefWidth="530.0">
+                    <children>
+                        <Label text="Deseja receber atualizações sobre o bug?">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="8.0" />
+                            </HBox.margin>
+                        </Label>
+                        <RadioButton fx:id="btnYes" mnemonicParsing="false" onAction="#selectYes" text="Sim">
+                            <HBox.margin>
+                                <Insets left="30.0" top="10.0" />
+                            </HBox.margin>
+                        </RadioButton>
+                        <RadioButton fx:id="btnNo" mnemonicParsing="false" onAction="#selectNo" text="Não">
+                            <HBox.margin>
+                                <Insets left="15.0" top="10.0" />
+                            </HBox.margin>
+                        </RadioButton>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="70.0" top="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="39.0" prefWidth="600.0">
+                    <children>
+                        <Button fx:id="btnOk" mnemonicParsing="false" onAction="#SelectOk" prefHeight="8.0" prefWidth="44.0" text="Ok">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="450.0" top="10.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets right="2.0" />
+                            </padding>
+                        </Button>
+                        <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#selectCancel" prefHeight="15.0" prefWidth="71.0" text="Cancelar">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" top="10.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets right="2.0" />
+                            </padding>
+                        </Button>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
